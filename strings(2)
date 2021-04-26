@@ -1,0 +1,13 @@
+#include<stdio.h>
+#include<stdlib.h>
+const char* string()
+{
+	char *str;
+	str=(char*)malloc(sizeof(char));
+	gets(str);
+	return(str);
+}
+int main()
+{
+	printf("Entered string is:%s\n",string());
+}
