@@ -1,0 +1,34 @@
+#include<stdio.h>
+#include<stdlib.h>
+struct BookStore
+{
+	int BookId;
+	char BookTitle[100];
+	char Author[100];
+	float price;
+};
+void Accept(struct BookStore *B)
+{
+	printf("Enter BookId\n");
+	scanf("%d",&B->BookId);
+	printf("Enter BookTitle\n");
+	scanf("%s",B->BookTitle);
+    printf("Enter Author \n");
+    scanf("%s",B->Author);
+    printf("Enter price \n");
+    scanf("%f",&B->price);
+}
+void Display(struct BookStore B)
+{
+	printf("Book_Id: %d\n",B.BookId);
+	printf("Book_Title: %s\n",B.BookTitle);
+	printf("Author: %s\n",B.Author);
+	printf("Price: %f\n",B.price);
+}
+int main()
+{
+	struct BookStore B;
+	Accept(&B);
+	Display(B);
+	return(0);
+}
